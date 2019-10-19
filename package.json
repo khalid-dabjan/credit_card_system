@@ -1,0 +1,15 @@
+{
+  "name": "publicis_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && /usr/local/Cellar/node/11.3.0_1/lib/node_modules/nodemon/bin/nodemon.js app.js\" \"cd client && npm start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.0.0"
+  }
+}

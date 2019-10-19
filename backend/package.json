@@ -1,0 +1,26 @@
+{
+  "name": "publicis",
+  "version": "1.0.0",
+  "description": "backend for credit card processing task",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "mongoose": "^5.7.5",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.4.5",
+    "mongodb-memory-server": "^5.2.8"
+  },
+  "proxy": "http://localhost:3001"
+}

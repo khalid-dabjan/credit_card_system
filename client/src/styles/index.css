@@ -1,0 +1,30 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+main {
+    @apply px-6 py-4;
+}
+
+.input {
+    @apply block border border-gray-400 py-1 px-2;
+}
+
+*:focus {
+    @apply outline-none;
+}
+
+.btn {
+    @apply block border border-gray-400 py-1 px-8;
+}
+
+.btn:focus {
+    @apply outline-none;
+}
+
+tr td:first-child,
+tr th:first-child {
+    @apply border-l;
+}
