@@ -26,8 +26,6 @@ if (process.env.NODE_ENV == 'test') {//setting uo in memory DB for testing only
         mongoose.connect(mongoUri, mongooseOpts);
     });
 } else {
-    // 'mongodb://<your-db-username-here>:<your-db-password-here>@ds249583.mlab.com:49583/fullstack_app';
-
 // connects our back end code with the database
     mongoose.connect('mongodb+srv://admin-user_1:03vINUhilf91c6vO@cluster0-bdda3.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true});
 
