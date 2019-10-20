@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cd backend && npm run test",
-    "start": "concurrently \"cd backend && /usr/local/Cellar/node/11.3.0_1/lib/node_modules/nodemon/bin/nodemon.js app.js\" \"cd client && npm start\"",
+    "setup": "cd backend && npm run install",
+    "start": "concurrently \"cd backend && node app.js\" \"cd client && npm start\"",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],

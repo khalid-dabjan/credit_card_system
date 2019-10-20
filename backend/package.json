@@ -20,7 +20,8 @@
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
     "mocha": "^2.4.5",
-    "mongodb-memory-server": "^5.2.8"
+    "mongodb-memory-server": "^5.2.8",
+    "nodemon": "^1.19.4"
   },
   "proxy": "http://localhost:3001"
 }
