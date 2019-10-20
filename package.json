@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cd backend && npm run test",
-    "setup": "cd backend && npm run install",
+    "setup": "cd backend && npm install && cd client && npm install",
     "start": "concurrently \"cd backend && node app.js\" \"cd client && npm start\"",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
