@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+import classNames from 'classnames';
 
 class Listing extends Component {
     constructor(props) {
@@ -34,14 +34,23 @@ class Listing extends Component {
 
                                 <tbody
                                     className=" flex flex-col items-center justify-between overflow-y-scroll w-full">
-                                {this.props.cards.map(card => (
-                                    <tr key={card._id} className="flex w-full border-b border-black">
-                                        <td className="p-4 w-1/4 text-center border-r border-black">{card.name}</td>
-                                        <td className="p-4 w-1/4 text-center border-r border-black">{card.cardNumber}</td>
-                                        <td className="p-4 w-1/4 text-center border-r border-black">{card.balance || 0}</td>
-                                        <td className="p-4 w-1/4 text-center border-r border-black">{card.limit}</td>
-                                    </tr>
-                                ))}
+                                {this.props.cards.map(card => {
+                                        let balanceDangerClass = classNames({
+                                            'text-red-700': card.balance <= 0
+                                        });
+                                        let limitDangerClass = classNames({
+                                            'text-red-700': card.limit <= 0
+                                        });
+                                        return (
+                                            <tr key={card._id} className="flex w-full border-b border-black">
+                                                <td className="p-4 w-1/4 text-center border-r border-black">{card.name}</td>
+                                                <td className="p-4 w-1/4 text-center border-r border-black">{card.cardNumber}</td>
+                                                <td className={'p-4 w-1/4 text-center border-r border-black ' + balanceDangerClass}>£{card.balance || 0}</td>
+                                                <td className={'p-4 w-1/4 text-center border-r border-black ' + limitDangerClass}>£{card.limit}</td>
+                                            </tr>
+                                        )
+                                    }
+                                )}
                                 </tbody>
                             </table>
                         )}

@@ -1,4 +1,3 @@
-// const validateCard = require('../middlewares/validateCard');
 const {check, validationResult} = require('express-validator');
 const Card = require('../models/Card');
 

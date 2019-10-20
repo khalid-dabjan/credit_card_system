@@ -7,7 +7,7 @@
     "test": "cd backend && npm run test",
     "setup": "npm install -s && cd client && npm install -s && cd ../backend && npm install -s",
     "start": "concurrently \"cd backend && node app.js\" \"cd client && npm start\"",
-    "heroku-postbuild": "npm run setup"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
