@@ -1,4 +1,4 @@
-# credit_card_system
+# Credit Card System
 
 Start by cloning the repo and `cd`ing into it:
 
